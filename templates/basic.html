@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+	</head>
+	<body>
+		<h1>Welcome to the site!</h1>
+		<h2>Here is a pic of a puppy</h2>
+		<img src="../static/puppy.avif" alt="" />
+		<h1>Hello {{letters[0: 3]}}</h1>
+		<h1>{{pup_dictionary['pup_name']}}</h1>
+		<ul>
+			{% for pup in puppies%}
+			<li>{{pup}}</li>
+			{% endfor %}
+		</ul>
+		{% if 'Rufus' in puppies %}
+		<p>Found you Rufus!</p>
+		{% else %}
+		<p>Hmm.. Rufus is not in the list!</p>
+		{% endif %}
+	</body>
+</html>
